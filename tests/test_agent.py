@@ -6,6 +6,11 @@ from livekit.agents import AgentSession, inference, llm
 from agent import Assistant
 
 
+def test_assistant_initializes() -> None:
+    assistant = Assistant()
+    assert assistant is not None
+
+
 def _judge_llm() -> llm.LLM:
     return inference.LLM(model="openai/gpt-4.1-mini")
 
